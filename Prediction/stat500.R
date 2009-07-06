@@ -21,7 +21,7 @@ dim(stat500)
 
 
 # Plot the data, final results against midterm. The ~ is used to define
-# formulas, ploting the formula final as function of midterm just assigns
+# formulas, plotting the formula final as function of midterm just assigns
 # the variables to the axis. This is equivalent to plot(stat500$final, stat500$midterm),
 # I just like using formulas better for consistency.
 plot(final ~ midterm, stat500, xlab='Midterm grades', ylab='Final grades')
@@ -48,7 +48,7 @@ summary(g)
 
 # The actual contents of an object can be examined using str() function, which
 # examines the structure of the object. This helps us to figure out which information
-# is accesible and can be used for other purposes. Note that R is a relatively
+# is accessible and can be used for other purposes. Note that R is a relatively
 # complex programming language in terms of the object types. Do not worry about
 # the details.
 str(g)
@@ -66,7 +66,7 @@ names(g)
 
 # Abline is used to add lines to a current plot. A plot() function must have been
 # called previously. In this case abline is able to extract from the lm fit the
-# information necesary to plot the line, the intercept and slope coefficients. R
+# information necessary to plot the line, the intercept and slope coefficients. R
 # is smart that way...
 abline(g,col='red')
 
@@ -92,8 +92,8 @@ dim(new)
 new[1:10,]
 
 
-# We are going to produce the predictions. predict() is a polimorfic function, 
-# meaning that it examines the firt object, determines it's type, and calles the
+# We are going to produce the predictions. predict() is a polymorphic function, 
+# meaning that it examines the first object, determines it's type, and calls the
 # appropriate method for that object. Effectively the method predict.lm() is
 # called, and we could have just used that and it would have made no difference.
 # The rest of the arguments are predict to produce confidence interval for the
@@ -104,12 +104,12 @@ new[1:10,]
 predictions = predict(g, new, interval='confidence',level=0.95)
 
 
-# The preductions object hold the respose for each input element plus an lwr
+# The predictions object hold the response for each input element plus an lwr
 # and upr value, which are the upper and lower confidence values
 str(predictions)
 
 
-# Note tha names() does not show the names of the variables, because predictions
+# Note that names() does not show the names of the variables, because predictions
 # is not a data frame but an array. R is complex that way, you just have to
 # get used to it... sorry
 names(predictions)
