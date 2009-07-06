@@ -21,7 +21,7 @@ prostate$train = NULL
 
 
 # This attaches the data to the workspace, the
-# variables in the data frame are now accesible
+# variables in the data frame are now accessible
 # directly by there names, so lcavol will now by
 # equal to prostate$lcavol
 attach(prostate)
@@ -31,7 +31,7 @@ attach(prostate)
 
 # We create a lineal model consisting only on the intercep.
 # This model is used a a baseline model for comparison.
-# Nota the we dont need to include the data frame in the 
+# Note the we don't need to include the data frame in the 
 # function as in lm(lpsa ~ 1, prostate), since we have it 
 # attached. Note that variable names may include points '.',
 # in other programming languages points have special meanings,
@@ -150,12 +150,12 @@ error.bs <- sum(abs(pred.bs - prostate.test$lpsa))/length(prostate.test$lpsa)
 
 # The ridge regression is implemented in simple.ridge (and probably in some other)
 # package. simple.ridge does not accept formulas, so we need to indicate the
-# predictor matrix and the response vector separatedly. This function also
+# predictor matrix and the response vector separately. This function also
 # accepts the degrees of freedom that we wish to use.
 g.ridge <- simple.ridge(prostate[,names(prostate) != 'lpsa'], prostate$lpsa,df=4)
 g.ridge
 
-# Prediction is also more complicated since ridge regression scaled internaly the
+# Prediction is also more complicated since ridge regression scaled internally the
 # inputs. 
 pred.ridge <- as.matrix(
 	cbind(1,scale(prostate.test,colMeans(prostate),TRUE)))[,1:9] %*% # Scale the inputs
