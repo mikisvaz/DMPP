@@ -75,7 +75,7 @@ abline(g,col='red')
 # interval, this requires evaluating the fit in a sequence of points evenly spaced.
 
 # Define the new points. A data frame is the most common way to hold information
-# in R, it represents elements with variables, where variables recieve names. The
+# in R, it represents elements with variables, where variables receive names. The
 # stat500 object is a data frame. We need a new data frame to hold new values. 
 # Since we are using it to predict, we don't need to specify the final, which is
 # the response we wish to predict. The midterms are defined as a sequence of points
@@ -115,7 +115,7 @@ str(predictions)
 names(predictions)
 
 
-# We draw them into the previous plot. Again, the plot must be allready be there.
+# We draw them into the previous plot. Again, the plot must be already be there.
 # we use lines to draw a line across the points, and set the color and style of the
 # line. We use cbind to bind columns, which makes each element a two variable element
 # (midterm, prediction), these to variables are taken as points in the plot and

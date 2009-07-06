@@ -21,7 +21,7 @@ plot(spnbmd ~ age, data=bone, main="Linear", col = ifelse(gender=="male", "blue"
 #################################
 # Linear Plots
 
-# We do three fits, one for all points and two for males and females separatedly
+# We do three fits, one for all points and two for males and females separately
 g.total = lm(spnbmd ~ age)
 abline(g.total)
 
@@ -53,7 +53,7 @@ lines(cbind(range,predict(g.female, range)),col='red2')
 
 
 ##############################
-# Fit a Kernel Regression smotther
+# Fit a Kernel Regression smoother
 
 # Repeat the plot
 plot(spnbmd ~ age, data=bone,main="Kernel (Loess)", col = ifelse(gender=="male", "blue", "red2"), xlab="Age", ylab="Relative Change in Spinal BMD")
@@ -74,8 +74,8 @@ lines(cbind(range,predict(g.female, range)),col='red2')
 # Repeat the plot
 plot(spnbmd ~ age, data=bone, main="Smoothing Spline", col = ifelse(gender=="male", "blue", "red2"), xlab="Age", ylab="Relative Change in Spinal BMD")
 
-# Smooth splines are a fascinating scatterplot smothing technique with its basis
-# in regularization over Reprociding Kernel Hilbert Spaces that need not concern you
+# Smooth splines are a fascinating scatterplot smoothing technique with its basis
+# in regularization over Reproducing Kernel Hilbert Spaces that need not concern you
 # now. Just know, they are easy to use and work very well. Internally they are 
 # equivalent to cubic splines with knots at every point
 g.total <- smooth.spline(spnbmd ~ age,df=12)
@@ -120,7 +120,7 @@ lines(cbind(range,predict(g.female, range)),col='red2')
 # Repeat the plot
 plot(spnbmd ~ age, data=bone, main="B-Spline", col = ifelse(gender=="male", "blue", "red2"), xlab="Age", ylab="Relative Change in Spinal BMD")
 
-# These are actually very similar. B-splines have other usufull properties, outside
+# These are actually very similar. B-splines have other useful properties, outside
 # the scope of this lecture. Just notice the similarity 
 df = 6
 g.total <- lm(spnbmd ~ bs(age, df=df))
@@ -156,7 +156,7 @@ k=10
 
 # This assigns our points to k classes randomly. rep()
 # produces a list of numbers from 1 to 10 repeated until
-# we have 485. These assigment is possibly random, there is
+# we have 485. These assignment is possibly random, there is
 # no reason to believe the elements are in no kind of order, but
 # to be sure we use sample to shuffle them again
 groups = sample(rep(1:k,length.out=dim(bone)[1]))

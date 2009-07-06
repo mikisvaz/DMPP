@@ -29,7 +29,7 @@ attach(prostate)
 ##############################
 # Base line model
 
-# We create a lineal model consisting only on the intercep.
+# We create a lineal model consisting only on the intercept.
 # This model is used a a baseline model for comparison.
 # Note the we don't need to include the data frame in the 
 # function as in lm(lpsa ~ 1, prostate), since we have it 
