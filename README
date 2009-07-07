@@ -10,3 +10,11 @@ http://biocomp.cnb.csic.es/~coss/Docencia/ADAM/ADAM.htm
 
 
 They correspond to day 2 Prediction and day 3 Classification. Each folder contains a Power Point presentation and a collection of R scripts to reproduce the results.
+
+URL for packages needed in the examples:
+
+http://cran.r-project.org/web/packages/faraway/index.html
+http://cran.r-project.org/web/packages/ElemStatLearn/index.html
+http://cran.r-project.org/web/packages/VR/index.html
+http://cran.r-project.org/web/packages/mvnormtest/index.html
+http://cran.r-project.org/web/packages/randomForest/index.html
