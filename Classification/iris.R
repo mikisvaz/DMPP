@@ -45,6 +45,8 @@ mshapiro.test(t(as.matrix(iris[iris[5] == 'setosa',-5])))
 mshapiro.test(t(as.matrix(iris[iris[5] == 'versicolor',-5])))
 mshapiro.test(t(as.matrix(iris[iris[5] == 'virginica',-5])))
 
+# The results actually reject the null hypothesis of normality, they are NOT
+# normaly distrbuted, still this method outperforms the other we examined...
 
 # This fits a SVM model
 model.svm <- svm(Species ~ ., iris,cost=500)
